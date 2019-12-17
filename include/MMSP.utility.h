@@ -7,6 +7,7 @@
 
 #include<cstring>
 #include<fstream>
+#include<complex>
 
 namespace MMSP {
 
@@ -213,6 +214,11 @@ std::string name(const double& value) {
 }
 std::string name(const long double& value) {
 	return "long double";
+}
+
+template<typename T>
+std::string name(std::complex<T> &value) {
+	return "complex " + name(T());
 }
 
 // mathematical operations
